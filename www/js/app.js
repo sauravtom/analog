@@ -78,12 +78,12 @@ angular.module('starter', ['ionic'])
     $scope.messages.push({
       userId: alternate ? '12345' : '54321',
       text: $scope.data.message,
-      time: d,
+      time: d
     });
     
-    $http.get('http://api.icndb.com/jokes/random').
+    $http.get('http://0.0.0.0:8000/message?msg='+$scope.data.message).
       success(function(data, status, headers, config) {
-        response = data['value']['joke']
+        response = data
         console.log(response)
         $scope.messages.push({
           userId: !alternate ? '12345' : '54321',
