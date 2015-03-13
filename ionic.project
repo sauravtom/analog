@@ -1,8 +1,8 @@
 {
-  "name": "inputErrors",
-  "email": "",
+  "name": "Analog",
+  "email": "stomatrix@gmail.com",
   "app_id": "12d83b09",
-  "package_name": "",
+  "package_name": "com.sauravtom.analog",
   "gulpStartupTasks": [
     "sass",
     "watch"
