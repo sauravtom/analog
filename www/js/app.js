@@ -62,7 +62,7 @@ angular.module('starter', ['ionic'])
 })
 
 
-.controller('Messages', function($scope, $timeout, $ionicScrollDelegate) {
+.controller('Messages', function($scope,$http, $timeout, $ionicScrollDelegate) {
 
   $scope.showTime = true;
 
@@ -79,14 +79,23 @@ angular.module('starter', ['ionic'])
       userId: alternate ? '12345' : '54321',
       text: $scope.data.message,
       time: d,
-      reply: 'Hello world'
     });
-    //get request
-    $scope.messages.push({
-      userId: alternate ? '12345' : '54321',
-      time: d,
-      reply: 'Hello world'
-    });
+    
+    $http.get('http://api.icndb.com/jokes/random').
+      success(function(data, status, headers, config) {
+        response = data['value']['joke']
+        console.log(response)
+        $scope.messages.push({
+          userId: !alternate ? '12345' : '54321',
+          time: d,
+          text:response
+        });
+      }).
+      error(function(data, status, headers, config) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+        console.log("Some error in API call" + status)
+      });
 
     delete $scope.data.message;
     $ionicScrollDelegate.scrollBottom(true);
