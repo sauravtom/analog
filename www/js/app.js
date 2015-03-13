@@ -70,7 +70,7 @@ angular.module('starter', ['ionic'])
     isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
 
   $scope.sendMessage = function() {
-    alternate = !alternate;
+    //alternate = !alternate;
 
     var d = new Date();
   d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
@@ -78,7 +78,14 @@ angular.module('starter', ['ionic'])
     $scope.messages.push({
       userId: alternate ? '12345' : '54321',
       text: $scope.data.message,
-      time: d
+      time: d,
+      reply: 'Hello world'
+    });
+    //get request
+    $scope.messages.push({
+      userId: alternate ? '12345' : '54321',
+      time: d,
+      reply: 'Hello world'
     });
 
     delete $scope.data.message;
