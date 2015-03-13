@@ -1,0 +1,42 @@
+1.  Initial message templates (Hi {{name}})
+    -what's up?
+    -what've you been up to?
+    -how was your day?
+    -how are you feeling?
+
+2. Response
+    -general replies
+        >(depending on response)
+        >happy (wow! that sounds great, glad to hear that, tell me more about it!)
+        >sad (OH! I see, don't be dishearted, you can tell me how you feel, I am here for you)
+        >>feeling sad? (I can get your friends if you like)
+
+    -help in topics
+        >user asks a general question, bot replies with helping answers
+        >eg (check out this link, i found this useful for you)
+
+    -Some random stuff depending on user interest (input from user)
+        >Would you like to hear a joke?
+        >I found this interesting article on the internet. Would you like to view it?
+        >would you like to watch this new movie?
+
+3.  Reminders
+    -User reminders
+    -google calender reminders
+    -facebook event reminders (not sure)
+    -push notifications (user activity, facebook activity)
+
+4.  User stats
+    -graph for positive and negative sentiments
+    -show entries related to each sentiment
+
+5.  Diary entry view
+    -user can view activity on any day
+    -Tweets with #analog can be viewed in app. (Also tweet from application)
+
+6.  Night message
+    -What different would you do today if you would be able to relive this day?
+    -Possible response
+        >Nothing, This day was great (very good sentiment)
+        >I would change (something) (not so good sentiment)
+    -What was the most significant thing that happened today?
